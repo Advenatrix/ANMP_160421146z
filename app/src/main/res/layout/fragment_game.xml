@@ -11,14 +11,15 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/playerTurn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="161dp"
-            android:layout_marginTop="268dp"
+            android:layout_marginTop="36dp"
             android:layout_marginEnd="192dp"
-            android:text="TextView"
+            android:text="Player's Turn"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,13 +27,13 @@
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Button"
+            android:layout_marginTop="456dp"
+            android:text="Back"
             app:icon="@drawable/baseline_keyboard_backspace_24"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="0.423"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintEnd_toEndOf="@+id/playerTurn"
+            app:layout_constraintHorizontal_bias="0.346"
+            app:layout_constraintStart_toStartOf="@+id/playerTurn"
+            app:layout_constraintTop_toBottomOf="@+id/playerTurn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

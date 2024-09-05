@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/actionGameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/gameFragment"
+            app:enterAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -22,5 +23,8 @@
         <action
             android:id="@+id/action_gameFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <argument
+            android:name="player_name"
+            app:argType="string" />
     </fragment>
 </navigation>

@@ -1,12 +1,14 @@
 package com.ubaya.anmp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.ubaya.anmp.databinding.FragmentGameBinding
+import java.util.logging.Logger
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,6 +33,11 @@ class GameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if(arguments != null) {
+            val playerName = GameFragmentArgs.fromBundle(requireArguments()).playerName
+            binding.playerTurn.text = "$playerName's Turn"
+            Log.e("playername","$playerName")
+        }
         binding.btnBack.setOnClickListener {
             val action = GameFragmentDirections.actionGameFragmentToMainFragment()
             Navigation.findNavController(it).navigate(action)
